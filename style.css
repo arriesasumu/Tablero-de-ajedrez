@@ -1,0 +1,83 @@
+/* El body define el fondo, color de texto, fuente y centra el texto de toda la página */
+body {
+    /* Cambia el color de fondo de la página */
+    background: steelblue;
+    /* Cambia el color del texto principal */
+    color: #eee;
+    /* Define la fuente para todo el texto */
+    font-family: sans-serif;
+    /* Centra horizontalmente el texto */
+    text-align: center;
+}
+
+/* El h1 es el título principal de la página */
+h1{
+    /* Añade espacio arriba del título */
+    padding-top: 40px;
+    /* Cambia el color del texto del título */
+    color: #fff;
+}
+
+/* El #tablero es el contenedor principal del tablero de ajedrez */
+#tablero {
+    /* Separa el tablero del título */
+    margin-top: 40px;
+    /* Cambia el color de fondo del tablero */
+    background: #e7c690;
+    /* Añade una sombra alrededor del tablero */
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6);
+    /* Redondea las esquinas del tablero */
+    border-radius: 3px;
+    /* (No tiene efecto en divs, solo en tablas) */
+    border-collapse: collapse;
+    /* Fija la altura del tablero */
+    height: 400px;
+    /* Fija el ancho del tablero */
+    width: 400px;
+    /* Posiciona el tablero de forma absoluta en la ventana */
+    position: absolute;
+    /* Distancia desde el borde superior */
+    top: 30px;
+    /* Distancia desde el borde derecho */
+    right: 0;
+    /* Distancia desde el borde inferior */
+    bottom: 0;
+    /* Distancia desde el borde izquierdo */
+    left: 0;
+    /* Centra el tablero horizontal y verticalmente */
+    margin: auto;
+}
+
+/* #tablero div div selecciona cada celda del tablero */
+#tablero div div {
+    /* Color del texto de las piezas negras */
+    color: #222;
+    /* Hace que las celdas se alineen horizontalmente */
+    float: left;
+    /* Tamaño grande para las piezas */
+    font-size: 36px;
+    /* Sombra clara para resaltar las piezas */
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, .6);
+    /* Ancho de cada celda */
+    width: 50px;
+    /* Alto de cada celda */
+    height: 50px;
+}
+
+/* Alterna el color de fondo para crear las casillas negras del tablero */
+#tablero div:nth-child(odd) div:nth-child(even),
+#tablero div:nth-child(even) div:nth-child(odd) {
+    /* Fondo oscuro semitransparente para las casillas negras */
+    background: rgba(0, 0, 0, .4);
+}
+
+/* Cambia el color de las piezas blancas en las dos últimas filas */
+#tablero div:nth-child(n+7) div {
+    /* Color blanco para las piezas blancas */
+    color: #fff;
+    /* Sombra oscura para resaltar sobre fondo claro */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+}
+
+
+
